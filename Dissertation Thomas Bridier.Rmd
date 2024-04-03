@@ -25,16 +25,9 @@ library(stats)
 
 ```
 
-```{r}
-
-```
 
 ```{r}
-
-```
-
-```{df1 <- read_excel("C:/Users/thomb/OneDrive - University of Edinburgh/4th year/dissertation project/bibliography/dataset/Diss project/excel file/actual_dataset.xlsx",}
-    sheet = "record_sheet")
+    df1 <- read_excel("C:/Users/thomb/OneDrive - University of Edinburgh/4th year/dissertation project/bibliography/dataset/Diss project/excel file/actual_dataset.xlsx",sheet = "record_sheet")
 df1 <- df1[df1$site_status != "Not Available" & df1$ISO3 != "SWE", ]
 columns_to_exclude <- c("7AC", "10", "11", "12", "13", "14", "15", "16", "18", "27", "28", "29", "30", "31AC")
 df1.1 <- df1[, setdiff(names(df1), columns_to_exclude)]
